@@ -1,21 +1,21 @@
 <template>
 <div class="container">
+App <button @click="fn">request tool</button>
 
-<p>{{ $store.state.A.username }}</p>
-<p>{{ $store.state.B.username }}</p>
-
-  App {{$store.state.user.profile.account}}
-  <button @click="$store.commit('user/setUser',{account:'zhousg'})">设置用户信息</button>
-  GoodShop</div>
+  <button @click="$store.commit('user/setUser',{account:'zhousg'})">Set User Info</button>
+</div>
 
 </template>
 
 <script>
-import { useStore } from 'vuex'
+import request from '@/utils/request'
 export default {
   name: 'App',
   setup () {
-
+const fn = () => {
+  request('/member/profile', 'get', {a: 10})
+}
+return { fn }
   }
 }
 </script>

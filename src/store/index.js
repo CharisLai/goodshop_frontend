@@ -1,8 +1,9 @@
 import { createStore } from 'vuex'
+// 持久化
 import createPersistedstate from 'vuex-persistedstate'
-import user from './modules/user'
 import cart from './modules/cart'
-
+import user from './modules/user'
+import category from './modules/category'
 
 
 export default createStore({
@@ -16,15 +17,20 @@ export default createStore({
 
     },
     modules: {
-        user,
         cart,
+        user,
+        category
     },
     getters: {
 
     },
+    // 插入套件
     plugins: [
+        // 預設儲存於LocalStorage
         createPersistedstate({
-            key: 'erabbit-client-pc-store',
+            // 數據名
+            key: 'erabbit-client-goodshop-store',
+            // module
             paths: ['user', 'cart']
         })
     ]
