@@ -1,10 +1,5 @@
 <template>
-<div class="container">
-App <button @click="fn">request tool</button>
-
-  <button @click="$store.commit('user/setUser',{account:'zhousg'})">Set User Info</button>
-</div>
-
+<RouterView></RouterView>
 </template>
 
 <script>
