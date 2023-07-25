@@ -7,7 +7,10 @@
 <!-- main -->
     <main>
       <!-- second route -->
+      <div class="container">
       <router-view></router-view>
+    </div>
+    
     </main>
 
     <!-- footer -->
