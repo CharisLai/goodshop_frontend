@@ -1,6 +1,7 @@
 <template>
+<apptopnav></apptopnav>
   <!-- top -->
-    <nav></nav>
+    
 
     <!-- header -->
     <header></header>
@@ -8,9 +9,9 @@
     <main>
       <!-- second route -->
       <div class="container">
-      <router-view></router-view>
+
     </div>
-    
+
     </main>
 
     <!-- footer -->
@@ -18,8 +19,10 @@
   </template>
   
   <script>
+  import apptopnav from '@/components/app-navbar.vue'
   export default {
-    name: 'xtx-layout'
+    name: 'Layout',
+    components: { apptopnav }
   }
   </script>
   

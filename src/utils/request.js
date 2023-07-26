@@ -5,7 +5,7 @@ import router from '@/router'
 
 // 1.創axios
 // 導出位址
-export const baseURL = ''
+export const baseURL = 'localhost'
 const instance = axios.create({
     // axios 基本配置
     baseURL,

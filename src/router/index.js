@@ -1,13 +1,13 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 
-const Layout = () => import('@/views/Layout')
-const GoodShop = () => import('@/views/goodshop/index')
+import Layout from '@/views/Layout.vue'
+import AppNavbar from '@/components/app-navbar.vue'
 const routes = [
   {
     path: '/',
     component: Layout,
     children: [
-      { path: '/', component: GoodShop }
+      { path: '/app-navbar', component: AppNavbar }
     ]
   }
 ]

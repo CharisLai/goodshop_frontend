@@ -7,22 +7,10 @@ import category from './modules/category'
 
 
 export default createStore({
-    state: {
-
-    },
-    mutations: {
-
-    },
-    actions: {
-
-    },
     modules: {
         cart,
         user,
         category
-    },
-    getters: {
-
     },
     // 插入套件
     plugins: [

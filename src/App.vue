@@ -1,9 +1,12 @@
 <template>
+  <div>
 <RouterView></RouterView>
+</div>
 </template>
 
 <script>
 import request from '@/utils/request'
+
 export default {
   name: 'App',
   setup () {
