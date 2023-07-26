@@ -8,4 +8,6 @@ import store from './store'
 import 'normalize.css'
 import '@/assets/styles/common.less'
 
+
+
 createApp(App).use(createPinia()).use(store).use(router).mount('#app')

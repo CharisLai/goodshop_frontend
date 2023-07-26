@@ -1,11 +1,15 @@
-<template v-if="profile.token">
+<template>
   <nav class="apptopnav">
     <div class="container">
       <ul>
-        <li><a href=""><i class="iconfont icon-user"></i>周杰伦</a></li>
+        <template v-if="profile.token">
+        <li><a href=""><i class="iconfont icon-user"></i>{{profile.account}}</a></li>
         <li><a href="">Logout</a></li>
+      </template>
+    <template v-else>
         <li><a href="">Login</a></li>
         <li><a href="">Signup</a></li>
+    </template>
         <li><a href="">購物車</a></li>
       </ul>
     </div>
@@ -21,6 +25,7 @@ export default defineComponent({
   setup () {
       // 取得user後才能切換
       const store = useStore()
+      // 使用vuex state需設置的計算屬性
       const profile = computed(() => {
         return store.state.user.profile
       })

@@ -1,29 +1,33 @@
 <template>
-<apptopnav></apptopnav>
+<AppTopNav></AppTopNav>
   <!-- top -->
-    
-
     <!-- header -->
-    <header></header>
+<AppHeard></AppHeard>
 <!-- main -->
-    <main>
-      <!-- second route -->
-      <div class="container">
+<main>
+<!-- second route -->
+<div class="container">
 
-    </div>
+</div>
 
-    </main>
+</main>
 
-    <!-- footer -->
-    <footer></footer>
+<!-- footer -->
+<AppFooter></AppFooter>
   </template>
   
   <script>
-  import apptopnav from '@/components/app-navbar.vue'
+  import AppTopNav from '@/components/app-navbar.vue'
+  import AppHeard from '@/components/app-header.vue'
+  import AppFooter from '@/components/app-footer.vue'
   export default {
     name: 'Layout',
-    components: { apptopnav }
+    components: { AppTopNav, AppHeard, AppFooter }
   }
   </script>
   
-  <style scoped lang='less'></style>
+  <style scoped lang='less'>
+.app-body {
+min-height: 600px;
+}
+</style>
